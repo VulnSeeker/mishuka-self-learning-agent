@@ -1,0 +1,32 @@
+# Env & secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Runtime data
+data/
+skills/
+*.sqlite3
+*.sqlite3-*
+chroma/
+models/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+*.swp
