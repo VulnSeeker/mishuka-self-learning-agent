@@ -1,9 +1,9 @@
 # ============================================================================
-# pyproject.toml — Mishuka Self-Learning Agent
+# pyproject.toml — Onyx Self-Learning Agent
 # ============================================================================
 # Author : vulnseeker
-# Repo   : mishuka-self-learning-agent
-# Agent  : Mishuka
+# Repo   : onyx-self-learning-agent
+# Agent  : Onyx
 # ============================================================================
 
 [build-system]
@@ -16,9 +16,9 @@ build-backend = "hatchling.build"
 # ============================================================================
 
 [project]
-name = "mishuka-self-learning-agent"
+name = "onyx-self-learning-agent"
 version = "0.1.0"
-description = "Mishuka — a self-learning AI agent that bootstraps skills from web research and builds its own knowledge bases."
+description = "Onyx — a self-learning AI agent that bootstraps skills from web research and builds its own knowledge bases."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
@@ -29,7 +29,7 @@ maintainers = [
     { name = "vulnseeker", email = "vulnseeker@users.noreply.github.com" },
 ]
 keywords = [
-    "mishuka",
+    "onyx",
     "ai",
     "agent",
     "llm",
@@ -97,25 +97,25 @@ docs = [
     "mkdocstrings[python]>=0.25.0",
 ]
 all = [
-    "mishuka-self-learning-agent[web,docker,graph,dev,docs]",
+    "onyx-self-learning-agent[web,docker,graph,dev,docs]",
 ]
 
 # ----------------------------------------------------------------------------
 # CLI entry point
 # ----------------------------------------------------------------------------
 [project.scripts]
-mishuka = "mishuka.cli:main"
+onyx = "onyx.cli:main"
 
 # ----------------------------------------------------------------------------
 # URLs
 # ----------------------------------------------------------------------------
 [project.urls]
-Homepage = "https://github.com/vulnseeker/mishuka-self-learning-agent"
-Documentation = "https://github.com/vulnseeker/mishuka-self-learning-agent#readme"
-Repository = "https://github.com/vulnseeker/mishuka-self-learning-agent"
-Issues = "https://github.com/vulnseeker/mishuka-self-learning-agent/issues"
-Changelog = "https://github.com/vulnseeker/mishuka-self-learning-agent/blob/main/CHANGELOG.md"
-"Bug Tracker" = "https://github.com/vulnseeker/mishuka-self-learning-agent/issues"
+Homepage = "https://github.com/vulnseeker/onyx-self-learning-agent"
+Documentation = "https://github.com/vulnseeker/onyx-self-learning-agent#readme"
+Repository = "https://github.com/vulnseeker/onyx-self-learning-agent"
+Issues = "https://github.com/vulnseeker/onyx-self-learning-agent/issues"
+Changelog = "https://github.com/vulnseeker/onyx-self-learning-agent/blob/main/CHANGELOG.md"
+"Bug Tracker" = "https://github.com/vulnseeker/onyx-self-learning-agent/issues"
 
 
 # ============================================================================
@@ -123,7 +123,7 @@ Changelog = "https://github.com/vulnseeker/mishuka-self-learning-agent/blob/main
 # ============================================================================
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/mishuka"]
+packages = ["src/onyx"]
 
 [tool.hatch.build.targets.sdist]
 include = [
@@ -189,7 +189,7 @@ ignore = [
 "examples/**/*.py" = ["T201", "ARG"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["mishuka"]
+known-first-party = ["onyx"]
 
 [tool.ruff.format]
 quote-style = "double"
@@ -245,7 +245,7 @@ addopts = [
     "-ra",
     "--strict-markers",
     "--strict-config",
-    "--cov=mishuka",
+    "--cov=onyx",
     "--cov-report=term-missing",
     "--cov-report=html:htmlcov",
     "--cov-fail-under=70",
@@ -269,7 +269,7 @@ filterwarnings = [
 # ============================================================================
 
 [tool.coverage.run]
-source = ["src/mishuka"]
+source = ["src/onyx"]
 branch = true
 omit = [
     "*/__main__.py",
