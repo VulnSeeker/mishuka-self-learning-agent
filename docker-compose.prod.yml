@@ -1,0 +1,22 @@
+# ============================================================================
+# docker-compose.prod.yml — Production overrides
+# ============================================================================
+# Usage:
+#   docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+# ============================================================================
+
+services:
+  onyx:
+    restart: always
+    environment:
+      LOG_LEVEL: WARNING
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 1G
+        reservations:
+          cpus: "0.25"
+          memory: 256M
+    # Production should not expose port directly — go through a reverse proxy
+    ports: []
