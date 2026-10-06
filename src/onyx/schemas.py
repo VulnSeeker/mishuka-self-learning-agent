@@ -12,7 +12,7 @@ Every external boundary is validated here.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any, Literal, Optional
+from typing import Any, Literal, Optional, cast
 
 from pydantic import BaseModel, Field, field_validator
 
@@ -74,6 +74,15 @@ class KnowledgeEntry(BaseModel):
     source_type: str = "web"
     confidence: float = 0.7
     tags: list[str] = Field(default_factory=list)
+
+    @field_validator("type", mode="before")
+    @classmethod
+    def _type_fallback(cls, v: Any) -> KnowledgeType:
+        if isinstance(v, str):
+            candidate = v.strip().lower()
+            if candidate in {"fact", "procedure", "code", "tool", "failure"}:
+                return cast(KnowledgeType, candidate)
+        return "fact"
 
     @field_validator("title")
     @classmethod
