@@ -26,6 +26,7 @@ from typing import Any, Iterator, Optional
 
 import chromadb
 from chromadb.config import Settings as ChromaSettings
+from chromadb.utils import embedding_functions
 
 from onyx.config import CONFIG, Config
 from onyx.schemas import KnowledgeEntry, SkillRecord
@@ -310,6 +311,7 @@ class VectorStore:
         return self.client.get_or_create_collection(
             name=f"skill_{skill_id}",
             metadata={"hnsw:space": "cosine"},
+            embedding_function=embedding_functions.DefaultEmbeddingFunction(),
         )
 
     def drop(self, skill_id: str) -> None:

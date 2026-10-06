@@ -33,10 +33,14 @@ _USER_AGENT = (
 
 def _load_ddg():
     try:
-        from duckduckgo_search import DDGS  # type: ignore
+        from ddgs import DDGS  # type: ignore
         return DDGS
     except ImportError:
-        return None
+        try:
+            from duckduckgo_search import DDGS  # type: ignore
+            return DDGS
+        except ImportError:
+            return None
 
 
 # ---------------------------------------------------------------------------
