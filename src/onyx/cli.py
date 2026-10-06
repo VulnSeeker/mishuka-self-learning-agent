@@ -10,6 +10,7 @@ Subcommands:
     onyx show <skill>        Show details of a learned skill
     onyx delete <skill>      Delete a skill and its knowledge base
     onyx train <task>        Plan and train a small ML model
+    onyx serve               Launch the FastAPI service
     onyx web                 Launch the Streamlit dashboard
     onyx info                Show current configuration
     onyx version             Show version
@@ -366,6 +367,36 @@ def _cmd_train(args: argparse.Namespace) -> int:
     return 0 if out.get("ok") else 1
 
 
+def _cmd_serve(args: argparse.Namespace) -> int:
+    """Launch the FastAPI service with uvicorn."""
+    try:
+        import uvicorn  # type: ignore
+    except ImportError:
+        _print_err(
+            "uvicorn is not installed. Run: pip install 'onyx-self-learning-agent[api]'"
+        )
+        return 1
+
+    url = f"http://{args.host}:{args.port}"
+    if _HAS_RICH and _console is not None:
+        _console.print(f"[cyan]Starting Onyx API on[/cyan] {url}")
+        _console.print(f"  Docs   : {url}/docs")
+        _console.print(f"  Health : {url}/health")
+    else:
+        print(f"Starting Onyx API on {url}")
+        print(f"  Docs   : {url}/docs")
+        print(f"  Health : {url}/health")
+
+    uvicorn.run(
+        "onyx.api:app",
+        host=args.host,
+        port=args.port,
+        reload=args.reload,
+        log_level=args.log_level.lower(),
+    )
+    return 0
+
+
 def _cmd_web(_args: argparse.Namespace) -> int:
     """Launch Streamlit pointing at onyx/web.py."""
     web_file = Path(__file__).parent / "web.py"
@@ -418,7 +449,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--version", action="version", version=f"onyx {__version__}")
     sub = parser.add_subparsers(dest="cmd", required=True)
 
-    # task  (NEW — top-level orchestration)
+    # task  (top-level orchestration)
     p = sub.add_parser(
         "task",
         help="Execute a task end-to-end: analyze, auto-learn missing skills, combine knowledge, answer",
@@ -466,6 +497,14 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("task", help="Natural-language model task")
     p.add_argument("--show-output", action="store_true", help="Print sandbox output")
     p.set_defaults(func=_cmd_train)
+
+    # serve  (FastAPI service)
+    p = sub.add_parser("serve", help="Launch the FastAPI service")
+    p.add_argument("--host", default="0.0.0.0", help="Bind host (default 0.0.0.0)")
+    p.add_argument("--port", type=int, default=8000, help="Bind port (default 8000)")
+    p.add_argument("--reload", action="store_true", help="Auto-reload on code changes")
+    p.add_argument("--log-level", default="info", help="Uvicorn log level")
+    p.set_defaults(func=_cmd_serve)
 
     # web
     p = sub.add_parser("web", help="Launch the Streamlit dashboard")
