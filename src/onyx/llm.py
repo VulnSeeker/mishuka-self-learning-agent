@@ -130,6 +130,11 @@ class LLMClient:
         max_tokens: int | None = None,
     ) -> str:
         """Single-turn chat completion. Returns the assistant message string."""
+        system = (
+            "IMPORTANT: Never call tools, functions, or built-in APIs. "
+            "Never return tool_use blocks. Respond with plain text or JSON only.\n\n"
+            + system
+        )
 
         @self._retry()
         def _call() -> str:

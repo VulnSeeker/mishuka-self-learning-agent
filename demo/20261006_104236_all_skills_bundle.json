@@ -1,0 +1,1031 @@
+{
+  "timestamp": "20261006_104236",
+  "config": {
+    "llm_model": "openai/gpt-oss-20b",
+    "embed_model": "nomic-embed-text-v1.5",
+    "data_dir": "/content/drive/MyDrive/onyx-data"
+  },
+  "skills": [
+    {
+      "skill_id": "file_i_o",
+      "name": "File I/O",
+      "description": "Fundamental techniques for reading, writing, and manipulating files and directories in a programming environment.",
+      "tools": [
+        "os",
+        "pathlib",
+        "shutil",
+        "io",
+        "csv",
+        "json",
+        "pickle",
+        "sqlite3",
+        "zipfile",
+        "tarfile"
+      ],
+      "entry_count": 18,
+      "created_at": "2026-10-06T10:24:20.206079+00:00",
+      "updated_at": "2026-10-06T10:24:20.206079+00:00",
+      "entries": [
+        {
+          "id": "d30df1f93f5de911e1f9047d",
+          "title": "Path Class in Java NIO.2",
+          "type": "fact",
+          "source_url": "https://docs.oracle.com/javase/tutorial/essential/io/fileio.html",
+          "confidence": 0.8,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:24:20.160091+00:00"
+        },
+        {
+          "id": "89d1bae072b6acc7a00eb56b",
+          "title": "File Operations in Java NIO.2",
+          "type": "procedure",
+          "source_url": "https://docs.oracle.com/javase/tutorial/essential/io/fileio.html",
+          "confidence": 0.8,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:24:20.160091+00:00"
+        },
+        {
+          "id": "131dffc74e20c79b1665c0c1",
+          "title": "Managing File Metadata",
+          "type": "procedure",
+          "source_url": "https://docs.oracle.com/javase/tutorial/essential/io/fileio.html",
+          "confidence": 0.8,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:24:20.160091+00:00"
+        },
+        {
+          "id": "0b931ba4ec7ad416ec07a286",
+          "title": "Reading and Writing Files",
+          "type": "procedure",
+          "source_url": "https://docs.oracle.com/javase/tutorial/essential/io/fileio.html",
+          "confidence": 0.8,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:24:20.160091+00:00"
+        },
+        {
+          "id": "2710f0322f1656f2da32e9b1",
+          "title": "Random Access Files in Java",
+          "type": "fact",
+          "source_url": "https://docs.oracle.com/javase/tutorial/essential/io/fileio.html",
+          "confidence": 0.8,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:24:20.160091+00:00"
+        },
+        {
+          "id": "9e07a714b710ad3863efc4ec",
+          "title": "Directory Operations and File Tree Walking",
+          "type": "procedure",
+          "source_url": "https://docs.oracle.com/javase/tutorial/essential/io/fileio.html",
+          "confidence": 0.8,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:24:20.160091+00:00"
+        },
+        {
+          "id": "870eab68873cb7804df26cea",
+          "title": "Path Class",
+          "type": "fact",
+          "source_url": "https://docs.oracle.com/javase/tutorial/essential/io/file.html",
+          "confidence": 0.8,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:24:20.160091+00:00"
+        },
+        {
+          "id": "6ec118492046fd0ca187cd40",
+          "title": "File Operations",
+          "type": "fact",
+          "source_url": "https://docs.oracle.com/javase/tutorial/essential/io/file.html",
+          "confidence": 0.8,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:24:20.160091+00:00"
+        },
+        {
+          "id": "41d95ea5a40b33457bee2bd1",
+          "title": "Managing Metadata",
+          "type": "fact",
+          "source_url": "https://docs.oracle.com/javase/tutorial/essential/io/file.html",
+          "confidence": 0.8,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:24:20.160091+00:00"
+        },
+        {
+          "id": "f54cd168348f838fc630fe00",
+          "title": "Random Access Files",
+          "type": "fact",
+          "source_url": "https://docs.oracle.com/javase/tutorial/essential/io/file.html",
+          "confidence": 0.8,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:24:20.160091+00:00"
+        },
+        {
+          "id": "3d9abf2883db25d89ed98a56",
+          "title": "Creating and Reading Directories",
+          "type": "fact",
+          "source_url": "https://docs.oracle.com/javase/tutorial/essential/io/file.html",
+          "confidence": 0.8,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:24:20.160091+00:00"
+        },
+        {
+          "id": "dd0ab447efe61dc26b0db532",
+          "title": "Links, Symbolic or Otherwise",
+          "type": "fact",
+          "source_url": "https://docs.oracle.com/javase/tutorial/essential/io/file.html",
+          "confidence": 0.8,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:24:20.160091+00:00"
+        },
+        {
+          "id": "d7c0c5269c9b252e678ffd22",
+          "title": "Watching a Directory for Changes",
+          "type": "fact",
+          "source_url": "https://docs.oracle.com/javase/tutorial/essential/io/file.html",
+          "confidence": 0.8,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:24:20.160091+00:00"
+        },
+        {
+          "id": "3a43e5c1cbfbe8f76970af3b",
+          "title": "File I/O functions in C",
+          "type": "fact",
+          "source_url": "https://www.geeksforgeeks.org/c/c-file-io/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:24:20.160091+00:00"
+        },
+        {
+          "id": "803379deeb89b835a6050c1e",
+          "title": "Text files in C",
+          "type": "fact",
+          "source_url": "https://www.geeksforgeeks.org/c/c-file-io/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:24:20.160091+00:00"
+        },
+        {
+          "id": "be025c767825a1d600ed65ed",
+          "title": "Binary files in C",
+          "type": "fact",
+          "source_url": "https://www.geeksforgeeks.org/c/c-file-io/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:24:20.160091+00:00"
+        },
+        {
+          "id": "6a9c0659cfa04c6a60a4dfcc",
+          "title": "File creation and opening in C",
+          "type": "fact",
+          "source_url": "https://www.geeksforgeeks.org/c/c-file-io/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:24:20.160091+00:00"
+        },
+        {
+          "id": "b46406cd4ccdc4193a743c18",
+          "title": "File manipulation functions in C",
+          "type": "fact",
+          "source_url": "https://www.geeksforgeeks.org/c/c-file-io/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:24:20.160091+00:00"
+        }
+      ]
+    },
+    {
+      "skill_id": "json",
+      "name": "JSON",
+      "description": "Understand, create, parse, validate, and transform JSON data.",
+      "tools": [
+        "jq",
+        "jsonlint",
+        "jsonschema",
+        "jsonpath-ng",
+        "jsonpickle"
+      ],
+      "entry_count": 10,
+      "created_at": "2026-10-06T10:23:52.243647+00:00",
+      "updated_at": "2026-10-06T10:23:52.243647+00:00",
+      "entries": [
+        {
+          "id": "314378802d3b78908347589b",
+          "title": "JSON Overview",
+          "type": "fact",
+          "source_url": "https://www.geeksforgeeks.org/javascript/json/",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:23:52.195664+00:00"
+        },
+        {
+          "id": "fcc5897d9f4b2557857f2d47",
+          "title": "Supported Data Structures in JSON",
+          "type": "fact",
+          "source_url": "https://www.geeksforgeeks.org/javascript/json/",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:23:52.195664+00:00"
+        },
+        {
+          "id": "003358f4c0ad845824496e86",
+          "title": "JSON vs XML Comparison",
+          "type": "fact",
+          "source_url": "https://www.geeksforgeeks.org/javascript/json/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:23:52.195664+00:00"
+        },
+        {
+          "id": "d9c9aae1d400b27a0daf0e23",
+          "title": "Common Use Cases for JSON",
+          "type": "fact",
+          "source_url": "https://www.geeksforgeeks.org/javascript/json/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:23:52.195664+00:00"
+        },
+        {
+          "id": "705620571be9fa73e775c8db",
+          "title": "JSON Definition",
+          "type": "fact",
+          "source_url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:23:52.195664+00:00"
+        },
+        {
+          "id": "8ffcb635dab69b89f2fe70c9",
+          "title": "JSON Supports Arrays",
+          "type": "fact",
+          "source_url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:23:52.195664+00:00"
+        },
+        {
+          "id": "b794a45ddfcfe675a7a65b1e",
+          "title": "Retrieve JSON with Fetch",
+          "type": "procedure",
+          "source_url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:23:52.195664+00:00"
+        },
+        {
+          "id": "2572ce4ccdfb8f2ddf397e3e",
+          "title": "Access JSON Values",
+          "type": "procedure",
+          "source_url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:23:52.195664+00:00"
+        },
+        {
+          "id": "36117119e33567f34a0fc8ca",
+          "title": "Parse and Stringify JSON",
+          "type": "procedure",
+          "source_url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:23:52.195664+00:00"
+        },
+        {
+          "id": "78ffe51b3d529a3f61d23949",
+          "title": "JSON Independent of JavaScript",
+          "type": "fact",
+          "source_url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T10:23:52.195664+00:00"
+        }
+      ]
+    },
+    {
+      "skill_id": "dockerfile_for_python_flask",
+      "name": "Dockerfile for Python Flask",
+      "description": "Create a Dockerfile that builds and runs a Python Flask application efficiently and securely.",
+      "tools": [
+        "Docker",
+        "Docker Compose",
+        "Docker Hub",
+        "Hadolint",
+        "Docker BuildKit",
+        "Docker Desktop"
+      ],
+      "entry_count": 8,
+      "created_at": "2026-10-06T09:27:09.571781+00:00",
+      "updated_at": "2026-10-06T09:27:09.571781+00:00",
+      "entries": [
+        {
+          "id": "0cf33c0a2bef5632014990a7",
+          "title": "Application File Structure",
+          "type": "fact",
+          "source_url": "https://www.geeksforgeeks.org/devops/dockerize-your-flask-app/",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:27:09.533470+00:00"
+        },
+        {
+          "id": "0e9d337815842cdcd67ef873",
+          "title": "Purpose of the Dockerfile",
+          "type": "fact",
+          "source_url": "https://www.geeksforgeeks.org/devops/dockerize-your-flask-app/",
+          "confidence": 0.92,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:27:09.533470+00:00"
+        },
+        {
+          "id": "36f85da8344a5fb66c19c3ad",
+          "title": "Coverage Topics for Dockerizing Flask",
+          "type": "fact",
+          "source_url": "https://www.geeksforgeeks.org/devops/dockerize-your-flask-app/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:27:09.533470+00:00"
+        },
+        {
+          "id": "823035d87d72d4ae94e8034f",
+          "title": "Step-by-Step Procedure Overview",
+          "type": "procedure",
+          "source_url": "https://www.geeksforgeeks.org/devops/dockerize-your-flask-app/",
+          "confidence": 0.88,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:27:09.533470+00:00"
+        },
+        {
+          "id": "3fb99488b404819ca9e7e26a",
+          "title": "Create Flask App Directory and Virtual Environment",
+          "type": "procedure",
+          "source_url": "https://tecadmin.net/how-to-create-and-run-a-flask-application-using-docker/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:27:09.533470+00:00"
+        },
+        {
+          "id": "646fbb9d2119bb05efd78823",
+          "title": "Basic Flask App Structure",
+          "type": "fact",
+          "source_url": "https://tecadmin.net/how-to-create-and-run-a-flask-application-using-docker/",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:27:09.533470+00:00"
+        },
+        {
+          "id": "673ab3e644db72511c89dcb5",
+          "title": "Installing Flask via pip",
+          "type": "procedure",
+          "source_url": "https://tecadmin.net/how-to-create-and-run-a-flask-application-using-docker/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:27:09.533470+00:00"
+        },
+        {
+          "id": "31182d08497d9fd730d30677",
+          "title": "Running Flask Locally",
+          "type": "procedure",
+          "source_url": "https://tecadmin.net/how-to-create-and-run-a-flask-application-using-docker/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:27:09.533470+00:00"
+        }
+      ]
+    },
+    {
+      "skill_id": "linux_command_line",
+      "name": "Linux Command Line",
+      "description": "Mastering the use of the Linux command line interface for file management, process control, networking, and scripting.",
+      "tools": [
+        "bash",
+        "zsh",
+        "sh",
+        "coreutils",
+        "find",
+        "grep",
+        "awk",
+        "sed",
+        "tar",
+        "ssh",
+        "scp",
+        "rsync",
+        "tmux",
+        "screen",
+        "vim",
+        "nano",
+        "less",
+        "cat",
+        "head",
+        "tail",
+        "cut",
+        "sort",
+        "uniq",
+        "diff",
+        "patch",
+        "make",
+        "cmake",
+        "gcc",
+        "gdb",
+        "strace",
+        "lsof",
+        "netstat",
+        "ip",
+        "ifconfig",
+        "ping",
+        "traceroute",
+        "curl",
+        "wget",
+        "apt",
+        "yum",
+        "dnf",
+        "pacman",
+        "systemctl",
+        "journalctl",
+        "crontab",
+        "sudo",
+        "su",
+        "passwd",
+        "useradd",
+        "groupadd",
+        "chmod",
+        "chown",
+        "chgrp",
+        "ln",
+        "rm",
+        "mv",
+        "cp",
+        "mkdir",
+        "rmdir",
+        "df",
+        "du",
+        "free",
+        "top",
+        "htop",
+        "ps",
+        "kill",
+        "pkill",
+        "killall",
+        "watch"
+      ],
+      "entry_count": 12,
+      "created_at": "2026-10-06T09:15:17.607965+00:00",
+      "updated_at": "2026-10-06T09:15:17.607965+00:00",
+      "entries": [
+        {
+          "id": "ad79a460f8a058596f4a832a",
+          "title": "What is the Linux command line?",
+          "type": "fact",
+          "source_url": "https://ubuntu.com/desktop/docs/en/latest/tutorial/the-linux-command-line-for-beginners/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:15:17.567671+00:00"
+        },
+        {
+          "id": "a53e0d898a59243023ba69be",
+          "title": "Opening a terminal on Ubuntu Desktop",
+          "type": "procedure",
+          "source_url": "https://ubuntu.com/desktop/docs/en/latest/tutorial/the-linux-command-line-for-beginners/",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:15:17.567671+00:00"
+        },
+        {
+          "id": "e51ec8efac8c78b26c95fe82",
+          "title": "Using the terminal for powerful tasks",
+          "type": "fact",
+          "source_url": "https://ubuntu.com/desktop/docs/en/latest/tutorial/the-linux-command-line-for-beginners/",
+          "confidence": 0.7,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:15:17.567671+00:00"
+        },
+        {
+          "id": "1e2b1f73aeff3be4e26c828a",
+          "title": "What is the Linux command line?",
+          "type": "fact",
+          "source_url": "https://ubuntu.com/tutorials/command-line-for-beginners",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:15:17.567671+00:00"
+        },
+        {
+          "id": "cb6940d014a430dc5f7b56e2",
+          "title": "Common names for the Linux command line",
+          "type": "fact",
+          "source_url": "https://ubuntu.com/tutorials/command-line-for-beginners",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:15:17.567671+00:00"
+        },
+        {
+          "id": "7818abcbd592d1ce5588a227",
+          "title": "Accessing the command line",
+          "type": "procedure",
+          "source_url": "https://ubuntu.com/tutorials/command-line-for-beginners",
+          "confidence": 0.8,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:15:17.567671+00:00"
+        },
+        {
+          "id": "8474937f4d49a23fab3559dd",
+          "title": "Basic file manipulation",
+          "type": "fact",
+          "source_url": "https://ubuntu.com/tutorials/command-line-for-beginners",
+          "confidence": 0.7,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:15:17.567671+00:00"
+        },
+        {
+          "id": "5c3985b84871c0c8c4e932ed",
+          "title": "Chaining commands",
+          "type": "fact",
+          "source_url": "https://ubuntu.com/tutorials/command-line-for-beginners",
+          "confidence": 0.7,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:15:17.567671+00:00"
+        },
+        {
+          "id": "cbc4fd1f3b05947632308660",
+          "title": "Using administrator powers",
+          "type": "fact",
+          "source_url": "https://ubuntu.com/tutorials/command-line-for-beginners",
+          "confidence": 0.7,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:15:17.567671+00:00"
+        },
+        {
+          "id": "b06aa7ffd71eb04c8b6bf469",
+          "title": "Prerequisites for the tutorial",
+          "type": "fact",
+          "source_url": "https://ubuntu.com/tutorials/command-line-for-beginners",
+          "confidence": 0.8,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:15:17.567671+00:00"
+        },
+        {
+          "id": "ed575a50775c916302cf4ec9",
+          "title": "export",
+          "type": "fact",
+          "source_url": "https://linuxcommand.org/lc3_man_page_index.php",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:15:17.567671+00:00"
+        },
+        {
+          "id": "5abac70fe4c9e4e00c9d9b35",
+          "title": "command",
+          "type": "fact",
+          "source_url": "https://linuxcommand.org/lc3_man_page_index.php",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:15:17.567671+00:00"
+        }
+      ]
+    },
+    {
+      "skill_id": "git",
+      "name": "Git",
+      "description": "Use Git for version control, including repository management, branching, merging, and collaboration.",
+      "tools": [
+        "git",
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "GitHub CLI",
+        "GitKraken",
+        "SourceTree",
+        "GitPython",
+        "Git LFS",
+        "GitHub Actions"
+      ],
+      "entry_count": 0,
+      "created_at": "2026-10-06T09:12:33.872712+00:00",
+      "updated_at": "2026-10-06T09:12:33.872712+00:00",
+      "entries": []
+    },
+    {
+      "skill_id": "open_source_intelligence_osint",
+      "name": "Open Source Intelligence (OSINT)",
+      "description": "Systematic collection and analysis of publicly available information to support investigative or security objectives.",
+      "tools": [
+        "Maltego",
+        "Shodan",
+        "SpiderFoot",
+        "Recon-ng",
+        "theHarvester",
+        "Censys",
+        "Google Dorks",
+        "Wayback Machine",
+        "VirusTotal",
+        "FOCA"
+      ],
+      "entry_count": 20,
+      "created_at": "2026-10-06T09:11:45.890903+00:00",
+      "updated_at": "2026-10-06T09:11:45.890903+00:00",
+      "entries": [
+        {
+          "id": "f78949e9c9c56f5ee8009cb5",
+          "title": "OSINT Definition",
+          "type": "fact",
+          "source_url": "https://tisa-intelligence.github.io/osint/osint-fundamentals/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:11:45.839286+00:00"
+        },
+        {
+          "id": "dd62d2de17bdd179eda0fb78",
+          "title": "Information Sources for OSINT",
+          "type": "fact",
+          "source_url": "https://tisa-intelligence.github.io/osint/osint-fundamentals/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:11:45.839286+00:00"
+        },
+        {
+          "id": "b978d49a74d9e24b73a50dc4",
+          "title": "Key Methodologies in OSINT",
+          "type": "fact",
+          "source_url": "https://tisa-intelligence.github.io/osint/osint-fundamentals/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:11:45.839286+00:00"
+        },
+        {
+          "id": "7c840d03b35953f7b260fff0",
+          "title": "Passive Collection",
+          "type": "procedure",
+          "source_url": "https://tisa-intelligence.github.io/osint/osint-fundamentals/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:11:45.839286+00:00"
+        },
+        {
+          "id": "5fb98901f9ede27cac25d63d",
+          "title": "Active Collection",
+          "type": "procedure",
+          "source_url": "https://tisa-intelligence.github.io/osint/osint-fundamentals/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:11:45.839286+00:00"
+        },
+        {
+          "id": "322d2b007d1a590f42ec0fe6",
+          "title": "Cross-Verification",
+          "type": "procedure",
+          "source_url": "https://tisa-intelligence.github.io/osint/osint-fundamentals/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:11:45.839286+00:00"
+        },
+        {
+          "id": "6e155882eb2981d7266eab61",
+          "title": "Legal Compliance in OSINT",
+          "type": "fact",
+          "source_url": "https://tisa-intelligence.github.io/osint/osint-fundamentals/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:11:45.839286+00:00"
+        },
+        {
+          "id": "ebd416623f0f443d0818ddda",
+          "title": "OSINT Learning Guide Overview",
+          "type": "fact",
+          "source_url": "https://github.com/TISA-INTELLIGENCE/osint",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:11:45.839286+00:00"
+        },
+        {
+          "id": "bfe430802577e4bb39e1f7fb",
+          "title": "Guide Features",
+          "type": "fact",
+          "source_url": "https://github.com/TISA-INTELLIGENCE/osint",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:11:45.839286+00:00"
+        },
+        {
+          "id": "b345801d3c9ea1f8c939d393",
+          "title": "Quick Start Prerequisites",
+          "type": "fact",
+          "source_url": "https://github.com/TISA-INTELLIGENCE/osint",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:11:45.839286+00:00"
+        },
+        {
+          "id": "9b28cb455b5c0fef7d70bba9",
+          "title": "Installation Procedure",
+          "type": "procedure",
+          "source_url": "https://github.com/TISA-INTELLIGENCE/osint",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:11:45.839286+00:00"
+        },
+        {
+          "id": "fdb4392b5ff106be70fbbb93",
+          "title": "Serve Locally",
+          "type": "procedure",
+          "source_url": "https://github.com/TISA-INTELLIGENCE/osint",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:11:45.839286+00:00"
+        },
+        {
+          "id": "835c6f5f9f13a2c8241cfbc6",
+          "title": "Build for Production",
+          "type": "procedure",
+          "source_url": "https://github.com/TISA-INTELLIGENCE/osint",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:11:45.839286+00:00"
+        },
+        {
+          "id": "8a2b095432239864959c4522",
+          "title": "Project Structure",
+          "type": "fact",
+          "source_url": "https://github.com/TISA-INTELLIGENCE/osint",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:11:45.839286+00:00"
+        },
+        {
+          "id": "fad09abaf9e7750bf2b87ec6",
+          "title": "OSINT Definition",
+          "type": "fact",
+          "source_url": "https://tisa-intelligence.github.io/osint/",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:11:45.839286+00:00"
+        },
+        {
+          "id": "5e7b2f3dc41ca77e2b284e0f",
+          "title": "Key Features of OSINT Guide",
+          "type": "fact",
+          "source_url": "https://tisa-intelligence.github.io/osint/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:11:45.839286+00:00"
+        },
+        {
+          "id": "282bb3981db51ae2c3bf7be7",
+          "title": "Email Discovery Methods",
+          "type": "procedure",
+          "source_url": "https://tisa-intelligence.github.io/osint/",
+          "confidence": 0.85,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:11:45.839286+00:00"
+        },
+        {
+          "id": "49b9ebac4c36f899496f9114",
+          "title": "Image Analysis Techniques",
+          "type": "procedure",
+          "source_url": "https://tisa-intelligence.github.io/osint/",
+          "confidence": 0.85,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:11:45.839286+00:00"
+        },
+        {
+          "id": "78b1f9ae3dc99632bf2976bd",
+          "title": "Geolocation Techniques",
+          "type": "procedure",
+          "source_url": "https://tisa-intelligence.github.io/osint/",
+          "confidence": 0.85,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:11:45.839286+00:00"
+        },
+        {
+          "id": "5ac837b33c8f8399e9569985",
+          "title": "Getting Started with OSINT",
+          "type": "procedure",
+          "source_url": "https://tisa-intelligence.github.io/osint/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T09:11:45.839286+00:00"
+        }
+      ]
+    },
+    {
+      "skill_id": "python_decorators",
+      "name": "Python decorators",
+      "description": "Use Python decorators to modify or extend the behavior of functions, methods, or classes.",
+      "tools": [
+        "functools",
+        "inspect",
+        "types",
+        "wrapt",
+        "decorator",
+        "pytest",
+        "mypy",
+        "pylint"
+      ],
+      "entry_count": 11,
+      "created_at": "2026-10-06T08:53:10.757941+00:00",
+      "updated_at": "2026-10-06T08:56:53.363221+00:00",
+      "entries": [
+        {
+          "id": "1c159a085adc08f6e3a2d8cf",
+          "title": "Decorator as design pattern tool",
+          "type": "fact",
+          "source_url": "https://www.geeksforgeeks.org/python/python-decorators-a-complete-guide/",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T08:56:53.314547+00:00"
+        },
+        {
+          "id": "e0433bbb1cd56d177ae7831d",
+          "title": "Decorator is a callable that accepts and returns a callable",
+          "type": "fact",
+          "source_url": "https://www.geeksforgeeks.org/python/python-decorators-a-complete-guide/",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T08:56:53.314547+00:00"
+        },
+        {
+          "id": "e1de9b684763e6dcf5f5ea6b",
+          "title": "Functions are first-class objects in Python",
+          "type": "fact",
+          "source_url": "https://www.geeksforgeeks.org/python/python-decorators-a-complete-guide/",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T08:56:53.314547+00:00"
+        },
+        {
+          "id": "247753e20a09fc7646f8016a",
+          "title": "Example: Decorator adding notes to docstring",
+          "type": "code",
+          "source_url": "https://www.geeksforgeeks.org/python/python-decorators-a-complete-guide/",
+          "confidence": 0.85,
+          "status": "approved",
+          "timestamp": "2026-10-06T08:56:53.314547+00:00"
+        },
+        {
+          "id": "b5d535d193945487c7b9f476",
+          "title": "Decorator syntax warning",
+          "type": "fact",
+          "source_url": "https://www.geeksforgeeks.org/python/python-decorators-a-complete-guide/",
+          "confidence": 0.8,
+          "status": "approved",
+          "timestamp": "2026-10-06T08:56:53.314547+00:00"
+        },
+        {
+          "id": "037cac0878f6a4a8fabd5e52",
+          "title": "Definition of a Python Decorator",
+          "type": "fact",
+          "source_url": "https://www.geeksforgeeks.org/python/decorators-in-python/",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T08:56:53.314547+00:00"
+        },
+        {
+          "id": "da57048ca6ad4f1a467647a7",
+          "title": "@ Syntax Shorthand",
+          "type": "fact",
+          "source_url": "https://www.geeksforgeeks.org/python/decorators-in-python/",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T08:56:53.314547+00:00"
+        },
+        {
+          "id": "040fbd66fdba6e93f334b52f",
+          "title": "Wrapper Function Structure",
+          "type": "procedure",
+          "source_url": "https://www.geeksforgeeks.org/python/decorators-in-python/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T08:56:53.314547+00:00"
+        },
+        {
+          "id": "4c2a229ad2a8f9123760519d",
+          "title": "Handling Arbitrary Arguments",
+          "type": "fact",
+          "source_url": "https://www.geeksforgeeks.org/python/decorators-in-python/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T08:56:53.314547+00:00"
+        },
+        {
+          "id": "017e42fbc660ee516a562f8e",
+          "title": "Common Use Cases for Decorators",
+          "type": "fact",
+          "source_url": "https://www.geeksforgeeks.org/python/decorators-in-python/",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T08:56:53.314547+00:00"
+        },
+        {
+          "id": "9f43f73febfd52c033888a6b",
+          "title": "Decorator with Parameters Example (Conceptual)",
+          "type": "fact",
+          "source_url": "https://www.geeksforgeeks.org/python/decorators-in-python/",
+          "confidence": 0.85,
+          "status": "approved",
+          "timestamp": "2026-10-06T08:56:53.314547+00:00"
+        }
+      ]
+    },
+    {
+      "skill_id": "python_asyncio",
+      "name": "Python asyncio",
+      "description": "Master asynchronous programming in Python using the asyncio library and related tools.",
+      "tools": [
+        "asyncio",
+        "aiohttp",
+        "asyncpg",
+        "aioredis",
+        "websockets",
+        "uvloop",
+        "pytest-asyncio"
+      ],
+      "entry_count": 10,
+      "created_at": "2026-10-06T07:12:48.692602+00:00",
+      "updated_at": "2026-10-06T07:12:48.692602+00:00",
+      "entries": [
+        {
+          "id": "dfafdc5bb44509547a095c10",
+          "title": "asyncio Purpose",
+          "type": "fact",
+          "source_url": "https://docs.python.org/3/library/asyncio.html",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T07:12:48.680366+00:00"
+        },
+        {
+          "id": "2452bb51aa129a719cef378d",
+          "title": "High‑Level APIs",
+          "type": "fact",
+          "source_url": "https://docs.python.org/3/library/asyncio.html",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T07:12:48.680366+00:00"
+        },
+        {
+          "id": "69fa138faaaea1826f0ec900",
+          "title": "Introspection Tools",
+          "type": "fact",
+          "source_url": "https://docs.python.org/3/library/asyncio.html",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T07:12:48.680366+00:00"
+        },
+        {
+          "id": "28c53033894f6ab30fc88c62",
+          "title": "Low‑Level APIs for Developers",
+          "type": "fact",
+          "source_url": "https://docs.python.org/3/library/asyncio.html",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T07:12:48.680366+00:00"
+        },
+        {
+          "id": "a5030c407058a1733e499655",
+          "title": "Foundation for Async Frameworks",
+          "type": "fact",
+          "source_url": "https://docs.python.org/3/library/asyncio.html",
+          "confidence": 0.95,
+          "status": "approved",
+          "timestamp": "2026-10-06T07:12:48.680366+00:00"
+        },
+        {
+          "id": "b9f4d75fbd7901c92a811aaa",
+          "title": "Event Loop",
+          "type": "fact",
+          "source_url": "https://docs.python.org/3/howto/a-conceptual-overview-of-asyncio.html",
+          "confidence": 0.9,
+          "status": "approved",
+          "timestamp": "2026-10-06T07:12:48.680366+00:00"
+        },
+        {
+          "id": "73a237b18d7b3016345e0a1d",
+          "title": "Async Sleep and Database Requests",
+          "type": "fact",
+          "source_url": "https://docs.python.org/3/howto/a-conceptual-overview-of-asyncio.html",
+          "confidence": 0.8,
+          "status": "approved",
+          "timestamp": "2026-10-06T07:12:48.680366+00:00"
+        },
+        {
+          "id": "065b744c6f88123fdc35f1b6",
+          "title": "High‑Level Building Blocks of asyncio",
+          "type": "fact",
+          "source_url": "https://docs.python.org/3/howto/a-conceptual-overview-of-asyncio.html",
+          "confidence": 0.85,
+          "status": "approved",
+          "timestamp": "2026-10-06T07:12:48.680366+00:00"
+        },
+        {
+          "id": "c47128c1e828cb697476eb98",
+          "title": "YouTube Tutorial Series by Åukasz Langa",
+          "type": "fact",
+          "source_url": "https://docs.python.org/3/howto/a-conceptual-overview-of-asyncio.html",
+          "confidence": 0.7,
+          "status": "approved",
+          "timestamp": "2026-10-06T07:12:48.680366+00:00"
+        },
+        {
+          "id": "5ffa031540bf71edcbb23bef",
+          "title": "Guide by Alexander Nordin",
+          "type": "fact",
+          "source_url": "https://docs.python.org/3/howto/a-conceptual-overview-of-asyncio.html",
+          "confidence": 0.7,
+          "status": "approved",
+          "timestamp": "2026-10-06T07:12:48.680366+00:00"
+        }
+      ]
+    }
+  ]
+}
