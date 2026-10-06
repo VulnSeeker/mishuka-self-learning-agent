@@ -52,19 +52,9 @@ onyx learn "Python asyncio"
 onyx run python_asyncio "Write a basic asyncio example that runs 3 tasks concurrently"
 ```
 
-JSON exports can also be generated programmatically:
-
-```python
-from onyx import Onyx
-
-agent = Onyx()
-result = agent.run("python_asyncio", "Write a basic asyncio example")
-print(result.answer)
-```
-
 ## Last updated
 
-2026-10-06 07:48:10 UTC
+2026-10-06 07:58:26 UTC
 
 ---
 
