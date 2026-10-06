@@ -1,9 +1,11 @@
+
 """
 Command-line interface for Onyx.
 
 Subcommands:
+    onyx task "<task>"       Execute a task end-to-end (auto-learn + multi-skill)
     onyx learn <skill>       Bootstrap a new skill from web research
-    onyx run <skill> <task>  Execute a task using a learned skill
+    onyx run <skill> <task>  Execute a task using a specific learned skill
     onyx skills              List learned skills
     onyx show <skill>        Show details of a learned skill
     onyx delete <skill>      Delete a skill and its knowledge base
@@ -70,6 +72,13 @@ def _print_ok(msg: str) -> None:
         print(f"ok: {msg}")
 
 
+def _rule(title: str) -> None:
+    if _HAS_RICH and _console is not None:
+        _console.rule(f"[bold]{title}")
+    else:
+        print("=" * 60)
+
+
 # ---------------------------------------------------------------------------
 # Progress helper
 # ---------------------------------------------------------------------------
@@ -100,6 +109,92 @@ def _make_progress_cb():
 # ---------------------------------------------------------------------------
 # Subcommand handlers
 # ---------------------------------------------------------------------------
+
+def _cmd_task(args: argparse.Namespace) -> int:
+    """Execute a natural-language task end-to-end (auto-learn + multi-skill)."""
+    cb, progress = _make_progress_cb()
+    try:
+        with Onyx() as ox:
+            result = ox.task(
+                args.task,
+                auto_learn=not args.no_learn,
+                progress=cb,
+            )
+    except AgentError as e:
+        if progress:
+            progress.stop()
+        _print_err(str(e))
+        return 1
+    finally:
+        if progress:
+            progress.stop()
+
+    # --- Answer ---
+    _print()
+    _rule("answer")
+    _print(result.answer)
+
+    # --- Analysis summary ---
+    _print()
+    _rule("execution summary")
+    _print(f"  time          : {result.elapsed_seconds:.1f}s")
+    _print(f"  context used  : {result.context_used}")
+    _print(f"  new entries   : {result.new_entries}")
+    if result.analysis.reasoning:
+        _print(f"  reasoning     : {result.analysis.reasoning}")
+
+    # --- Skill resolution table ---
+    if result.skill_matches:
+        _print()
+        _rule("skills resolved")
+        if _HAS_RICH and _console is not None:
+            table = Table(show_header=True, header_style="bold")
+            table.add_column("required", style="cyan")
+            table.add_column("status", style="magenta")
+            table.add_column("matched skill", style="bold")
+            table.add_column("conf", justify="right")
+            for m in result.skill_matches:
+                status_color = {
+                    "matched": "green",
+                    "learned": "yellow",
+                    "failed": "red",
+                }.get(m.status, "white")
+                table.add_row(
+                    m.required_name,
+                    f"[{status_color}]{m.status}[/{status_color}]",
+                    m.existing_id or "-",
+                    f"{m.confidence:.2f}",
+                )
+            _console.print(table)
+        else:
+            for m in result.skill_matches:
+                _print(f"  {m.required_name:30s} {m.status:10s} {m.existing_id or '-'}")
+
+    # --- Model training result ---
+    if result.model_result:
+        _print()
+        _rule("model training")
+        plan = result.model_result.get("plan") or {}
+        _print(f"  library       : {plan.get('library', '?')}")
+        _print(f"  dataset       : {plan.get('dataset_name', '?')}")
+        metric = result.model_result.get("metric")
+        if metric:
+            _print(f"  metric        : {metric}")
+
+    # --- Code output ---
+    if args.show_code and result.code_output:
+        _print()
+        _rule("code output")
+        _print(result.code_output)
+
+    # --- Plan ---
+    if args.show_plan and result.plan:
+        _print()
+        _rule("plan")
+        _print(json.dumps(result.plan, indent=2))
+
+    return 0
+
 
 def _cmd_learn(args: argparse.Namespace) -> int:
     cb, progress = _make_progress_cb()
@@ -144,35 +239,23 @@ def _cmd_run(args: argparse.Namespace) -> int:
             progress.stop()
 
     _print()
-    if _HAS_RICH and _console is not None:
-        _console.rule("[bold]answer")
-    else:
-        print("=" * 60)
+    _rule("answer")
     _print(result.answer)
 
     _print()
-    if _HAS_RICH and _console is not None:
-        _console.rule("[bold]stats")
-    else:
-        print("-" * 60)
+    _rule("stats")
     _print(f"  context entries : {result.context_used}")
     _print(f"  new entries     : {result.new_entries}")
     _print(f"  gap detected    : {result.gap.get('gap', False)}")
 
     if args.show_code and result.code_output:
         _print()
-        if _HAS_RICH and _console is not None:
-            _console.rule("[bold]code output")
-        else:
-            print("-" * 60)
+        _rule("code output")
         _print(result.code_output)
 
     if args.show_plan and result.plan:
         _print()
-        if _HAS_RICH and _console is not None:
-            _console.rule("[bold]plan")
-        else:
-            print("-" * 60)
+        _rule("plan")
         _print(json.dumps(result.plan, indent=2))
 
     return 0
@@ -277,7 +360,7 @@ def _cmd_train(args: argparse.Namespace) -> int:
 
     if args.show_output:
         _print()
-        _print("[bold]sandbox output:[/bold]" if _HAS_RICH else "sandbox output:")
+        _rule("sandbox output")
         _print(out.get("stdout", ""))
 
     return 0 if out.get("ok") else 1
@@ -335,13 +418,28 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--version", action="version", version=f"onyx {__version__}")
     sub = parser.add_subparsers(dest="cmd", required=True)
 
+    # task  (NEW — top-level orchestration)
+    p = sub.add_parser(
+        "task",
+        help="Execute a task end-to-end: analyze, auto-learn missing skills, combine knowledge, answer",
+    )
+    p.add_argument("task", help="Natural-language task description")
+    p.add_argument(
+        "--no-learn",
+        action="store_true",
+        help="Do not auto-learn missing skills (use only existing ones)",
+    )
+    p.add_argument("--show-code", action="store_true", help="Print sandbox code output")
+    p.add_argument("--show-plan", action="store_true", help="Print the runtime plan JSON")
+    p.set_defaults(func=_cmd_task)
+
     # learn
     p = sub.add_parser("learn", help="Bootstrap a new skill from web research")
     p.add_argument("skill", help="Skill name, e.g. 'OSINT'")
     p.set_defaults(func=_cmd_learn)
 
     # run
-    p = sub.add_parser("run", help="Execute a task using a learned skill")
+    p = sub.add_parser("run", help="Execute a task using a specific learned skill")
     p.add_argument("skill", help="Skill id (see 'onyx skills')")
     p.add_argument("task", help="Natural-language task")
     p.add_argument("--show-code", action="store_true", help="Print sandbox code output")
