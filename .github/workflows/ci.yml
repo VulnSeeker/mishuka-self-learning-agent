@@ -35,11 +35,10 @@ jobs:
           pip install -e ".[api,dev]"
 
       - name: Lint with ruff
-        run: |
-          ruff check src tests --output-format=github
+        run: ruff check src tests --output-format=github
 
-            - name: Check formatting
-        run: ruff format --check src tests || true
+      - name: Check formatting
+        run: ruff format --check src tests
         continue-on-error: true
 
       - name: Type check with mypy
