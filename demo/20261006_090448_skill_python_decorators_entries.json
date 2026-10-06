@@ -1,0 +1,106 @@
+{
+  "timestamp": "20261006_090448",
+  "skill_id": "python_decorators",
+  "total_entries": 11,
+  "entries": [
+    {
+      "id": "1c159a085adc08f6e3a2d8cf",
+      "title": "Decorator as design pattern tool",
+      "type": "fact",
+      "source_url": "https://www.geeksforgeeks.org/python/python-decorators-a-complete-guide/",
+      "confidence": 0.95,
+      "status": "approved",
+      "timestamp": "2026-10-06T08:56:53.314547+00:00"
+    },
+    {
+      "id": "e0433bbb1cd56d177ae7831d",
+      "title": "Decorator is a callable that accepts and returns a callable",
+      "type": "fact",
+      "source_url": "https://www.geeksforgeeks.org/python/python-decorators-a-complete-guide/",
+      "confidence": 0.95,
+      "status": "approved",
+      "timestamp": "2026-10-06T08:56:53.314547+00:00"
+    },
+    {
+      "id": "e1de9b684763e6dcf5f5ea6b",
+      "title": "Functions are first-class objects in Python",
+      "type": "fact",
+      "source_url": "https://www.geeksforgeeks.org/python/python-decorators-a-complete-guide/",
+      "confidence": 0.95,
+      "status": "approved",
+      "timestamp": "2026-10-06T08:56:53.314547+00:00"
+    },
+    {
+      "id": "247753e20a09fc7646f8016a",
+      "title": "Example: Decorator adding notes to docstring",
+      "type": "code",
+      "source_url": "https://www.geeksforgeeks.org/python/python-decorators-a-complete-guide/",
+      "confidence": 0.85,
+      "status": "approved",
+      "timestamp": "2026-10-06T08:56:53.314547+00:00"
+    },
+    {
+      "id": "b5d535d193945487c7b9f476",
+      "title": "Decorator syntax warning",
+      "type": "fact",
+      "source_url": "https://www.geeksforgeeks.org/python/python-decorators-a-complete-guide/",
+      "confidence": 0.8,
+      "status": "approved",
+      "timestamp": "2026-10-06T08:56:53.314547+00:00"
+    },
+    {
+      "id": "037cac0878f6a4a8fabd5e52",
+      "title": "Definition of a Python Decorator",
+      "type": "fact",
+      "source_url": "https://www.geeksforgeeks.org/python/decorators-in-python/",
+      "confidence": 0.95,
+      "status": "approved",
+      "timestamp": "2026-10-06T08:56:53.314547+00:00"
+    },
+    {
+      "id": "da57048ca6ad4f1a467647a7",
+      "title": "@ Syntax Shorthand",
+      "type": "fact",
+      "source_url": "https://www.geeksforgeeks.org/python/decorators-in-python/",
+      "confidence": 0.95,
+      "status": "approved",
+      "timestamp": "2026-10-06T08:56:53.314547+00:00"
+    },
+    {
+      "id": "040fbd66fdba6e93f334b52f",
+      "title": "Wrapper Function Structure",
+      "type": "procedure",
+      "source_url": "https://www.geeksforgeeks.org/python/decorators-in-python/",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T08:56:53.314547+00:00"
+    },
+    {
+      "id": "4c2a229ad2a8f9123760519d",
+      "title": "Handling Arbitrary Arguments",
+      "type": "fact",
+      "source_url": "https://www.geeksforgeeks.org/python/decorators-in-python/",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T08:56:53.314547+00:00"
+    },
+    {
+      "id": "017e42fbc660ee516a562f8e",
+      "title": "Common Use Cases for Decorators",
+      "type": "fact",
+      "source_url": "https://www.geeksforgeeks.org/python/decorators-in-python/",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T08:56:53.314547+00:00"
+    },
+    {
+      "id": "9f43f73febfd52c033888a6b",
+      "title": "Decorator with Parameters Example (Conceptual)",
+      "type": "fact",
+      "source_url": "https://www.geeksforgeeks.org/python/decorators-in-python/",
+      "confidence": 0.85,
+      "status": "approved",
+      "timestamp": "2026-10-06T08:56:53.314547+00:00"
+    }
+  ]
+}

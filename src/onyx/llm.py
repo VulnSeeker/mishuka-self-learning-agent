@@ -175,25 +175,16 @@ class LLMClient:
     # ------------------------------------------------------------------
 
     def embed(self, texts: Iterable[str] | str) -> list[list[float]]:
-        """Embed one or more strings. Returns a list of vectors."""
+        """Embed using local ChromaDB default function (no API call)."""
+        from chromadb.utils import embedding_functions
+        ef = embedding_functions.DefaultEmbeddingFunction()
         batch = [texts] if isinstance(texts, str) else list(texts)
         if not batch:
             return []
-
-        @self._retry()
-        def _call() -> list[list[float]]:
-            with self._lock:
-                resp = self._client.embeddings.create(
-                    model=self.cfg.embed_model,
-                    input=batch,
-                )
-            return [d.embedding for d in resp.data]
-
-        try:
-            return _call()
-        except APIError as e:
-            log.error("LLM embed failed: %s", e)
-            raise
+        result = []
+        for vec in ef(batch):
+            result.append([float(x) for x in vec])
+        return result
 
     def embed_one(self, text: str) -> list[float]:
         """Embed a single string. Returns one vector."""

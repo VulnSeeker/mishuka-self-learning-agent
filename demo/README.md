@@ -1,16 +1,21 @@
 # Onyx - Demo Outputs
 
-This folder contains real, timestamped JSON exports produced by a running
-Onyx agent. Every file is auto-generated; nothing here is hand-written.
+Real, timestamped JSON exports from a working Onyx agent.
+Every file is auto-generated; nothing here is hand-written.
+
+## Skills covered
+
+- `python_asyncio` — asynchronous programming
+- `python_decorators` — decorator patterns and use cases
 
 ## File reference
 
 | Pattern | Contents |
 |---|---|
 | `*_skills_inventory.json` | All learned skills with metadata |
-| `*_skill_<name>_entries.json` | Every knowledge entry for a given skill |
-| `*_task_result.json` | Full runtime output: answer, plan, generated code, sandbox result, gap analysis |
-| `*_all_skills_bundle.json` | Complete backup: all skills and their knowledge entries |
+| `*_skill_<name>_entries.json` | Knowledge entries for one skill |
+| `*_task_results_all.json` | Full runtime output for every task: answer, plan, generated code, sandbox result, gap analysis |
+| `*_all_skills_bundle.json` | Complete backup: all skills and all entries |
 | `*_summary.json` | High-level summary of the run |
 
 ## Environment
@@ -22,39 +27,38 @@ Onyx agent. Every file is auto-generated; nothing here is hand-written.
 - **Registry**: SQLite
 - **Runtime**: Google Colab (CPU)
 
-## Example task
-
-The most recent run executed:
+## Example tasks
 
 ```
 onyx learn "Python asyncio"
+onyx learn "Python decorators"
+
 onyx run python_asyncio "Write a basic asyncio example that runs 3 tasks concurrently"
+onyx run python_decorators "Write a simple Python decorator that logs function calls"
 ```
 
 ### Result summary
 
-- Knowledge entries learned: 10
-- Context retrieved at runtime: 8 entries
-- Generated code executed: yes, inside a sandboxed subprocess
-- Latency: approximately 7 seconds
-- Gap detection: triggered
+- Skills learned: 2
+- Knowledge entries: 10 (asyncio) + 11 (decorators) = 21 total
+- Tasks executed: 2, both successful
+- Code executed: yes, inside a sandboxed subprocess
+- Latency: 7.8s and 11.8s respectively
 
 ## Reproducing locally
-
-Clone the repository, install the package, configure your LLM provider
-in `.env`, then run the same commands:
 
 ```
 git clone https://github.com/VulnSeeker/onyx-self-learning-agent.git
 cd onyx-self-learning-agent
 pip install -e .
+# Configure your LLM provider in .env, then:
 onyx learn "Python asyncio"
-onyx run python_asyncio "Write a basic asyncio example that runs 3 tasks concurrently"
+onyx run python_asyncio "Write a basic asyncio example"
 ```
 
 ## Last updated
 
-2026-10-06 07:58:26 UTC
+2026-10-06 09:07:28 UTC
 
 ---
 
