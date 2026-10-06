@@ -1,0 +1,79 @@
+{
+  "timestamp": "20261006_093151",
+  "skill_id": "dockerfile_for_python_flask",
+  "total_entries": 8,
+  "entries": [
+    {
+      "id": "0cf33c0a2bef5632014990a7",
+      "title": "Application File Structure",
+      "type": "fact",
+      "source_url": "https://www.geeksforgeeks.org/devops/dockerize-your-flask-app/",
+      "confidence": 0.95,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:27:09.533470+00:00"
+    },
+    {
+      "id": "0e9d337815842cdcd67ef873",
+      "title": "Purpose of the Dockerfile",
+      "type": "fact",
+      "source_url": "https://www.geeksforgeeks.org/devops/dockerize-your-flask-app/",
+      "confidence": 0.92,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:27:09.533470+00:00"
+    },
+    {
+      "id": "36f85da8344a5fb66c19c3ad",
+      "title": "Coverage Topics for Dockerizing Flask",
+      "type": "fact",
+      "source_url": "https://www.geeksforgeeks.org/devops/dockerize-your-flask-app/",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:27:09.533470+00:00"
+    },
+    {
+      "id": "823035d87d72d4ae94e8034f",
+      "title": "Step-by-Step Procedure Overview",
+      "type": "procedure",
+      "source_url": "https://www.geeksforgeeks.org/devops/dockerize-your-flask-app/",
+      "confidence": 0.88,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:27:09.533470+00:00"
+    },
+    {
+      "id": "3fb99488b404819ca9e7e26a",
+      "title": "Create Flask App Directory and Virtual Environment",
+      "type": "procedure",
+      "source_url": "https://tecadmin.net/how-to-create-and-run-a-flask-application-using-docker/",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:27:09.533470+00:00"
+    },
+    {
+      "id": "646fbb9d2119bb05efd78823",
+      "title": "Basic Flask App Structure",
+      "type": "fact",
+      "source_url": "https://tecadmin.net/how-to-create-and-run-a-flask-application-using-docker/",
+      "confidence": 0.95,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:27:09.533470+00:00"
+    },
+    {
+      "id": "673ab3e644db72511c89dcb5",
+      "title": "Installing Flask via pip",
+      "type": "procedure",
+      "source_url": "https://tecadmin.net/how-to-create-and-run-a-flask-application-using-docker/",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:27:09.533470+00:00"
+    },
+    {
+      "id": "31182d08497d9fd730d30677",
+      "title": "Running Flask Locally",
+      "type": "procedure",
+      "source_url": "https://tecadmin.net/how-to-create-and-run-a-flask-application-using-docker/",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:27:09.533470+00:00"
+    }
+  ]
+}

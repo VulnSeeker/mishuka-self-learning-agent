@@ -1,0 +1,187 @@
+{
+  "timestamp": "20261006_093151",
+  "skill_id": "open_source_intelligence_osint",
+  "total_entries": 20,
+  "entries": [
+    {
+      "id": "f78949e9c9c56f5ee8009cb5",
+      "title": "OSINT Definition",
+      "type": "fact",
+      "source_url": "https://tisa-intelligence.github.io/osint/osint-fundamentals/",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:11:45.839286+00:00"
+    },
+    {
+      "id": "dd62d2de17bdd179eda0fb78",
+      "title": "Information Sources for OSINT",
+      "type": "fact",
+      "source_url": "https://tisa-intelligence.github.io/osint/osint-fundamentals/",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:11:45.839286+00:00"
+    },
+    {
+      "id": "b978d49a74d9e24b73a50dc4",
+      "title": "Key Methodologies in OSINT",
+      "type": "fact",
+      "source_url": "https://tisa-intelligence.github.io/osint/osint-fundamentals/",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:11:45.839286+00:00"
+    },
+    {
+      "id": "7c840d03b35953f7b260fff0",
+      "title": "Passive Collection",
+      "type": "procedure",
+      "source_url": "https://tisa-intelligence.github.io/osint/osint-fundamentals/",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:11:45.839286+00:00"
+    },
+    {
+      "id": "5fb98901f9ede27cac25d63d",
+      "title": "Active Collection",
+      "type": "procedure",
+      "source_url": "https://tisa-intelligence.github.io/osint/osint-fundamentals/",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:11:45.839286+00:00"
+    },
+    {
+      "id": "322d2b007d1a590f42ec0fe6",
+      "title": "Cross-Verification",
+      "type": "procedure",
+      "source_url": "https://tisa-intelligence.github.io/osint/osint-fundamentals/",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:11:45.839286+00:00"
+    },
+    {
+      "id": "6e155882eb2981d7266eab61",
+      "title": "Legal Compliance in OSINT",
+      "type": "fact",
+      "source_url": "https://tisa-intelligence.github.io/osint/osint-fundamentals/",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:11:45.839286+00:00"
+    },
+    {
+      "id": "ebd416623f0f443d0818ddda",
+      "title": "OSINT Learning Guide Overview",
+      "type": "fact",
+      "source_url": "https://github.com/TISA-INTELLIGENCE/osint",
+      "confidence": 0.95,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:11:45.839286+00:00"
+    },
+    {
+      "id": "bfe430802577e4bb39e1f7fb",
+      "title": "Guide Features",
+      "type": "fact",
+      "source_url": "https://github.com/TISA-INTELLIGENCE/osint",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:11:45.839286+00:00"
+    },
+    {
+      "id": "b345801d3c9ea1f8c939d393",
+      "title": "Quick Start Prerequisites",
+      "type": "fact",
+      "source_url": "https://github.com/TISA-INTELLIGENCE/osint",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:11:45.839286+00:00"
+    },
+    {
+      "id": "9b28cb455b5c0fef7d70bba9",
+      "title": "Installation Procedure",
+      "type": "procedure",
+      "source_url": "https://github.com/TISA-INTELLIGENCE/osint",
+      "confidence": 0.95,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:11:45.839286+00:00"
+    },
+    {
+      "id": "fdb4392b5ff106be70fbbb93",
+      "title": "Serve Locally",
+      "type": "procedure",
+      "source_url": "https://github.com/TISA-INTELLIGENCE/osint",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:11:45.839286+00:00"
+    },
+    {
+      "id": "835c6f5f9f13a2c8241cfbc6",
+      "title": "Build for Production",
+      "type": "procedure",
+      "source_url": "https://github.com/TISA-INTELLIGENCE/osint",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:11:45.839286+00:00"
+    },
+    {
+      "id": "8a2b095432239864959c4522",
+      "title": "Project Structure",
+      "type": "fact",
+      "source_url": "https://github.com/TISA-INTELLIGENCE/osint",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:11:45.839286+00:00"
+    },
+    {
+      "id": "fad09abaf9e7750bf2b87ec6",
+      "title": "OSINT Definition",
+      "type": "fact",
+      "source_url": "https://tisa-intelligence.github.io/osint/",
+      "confidence": 0.95,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:11:45.839286+00:00"
+    },
+    {
+      "id": "5e7b2f3dc41ca77e2b284e0f",
+      "title": "Key Features of OSINT Guide",
+      "type": "fact",
+      "source_url": "https://tisa-intelligence.github.io/osint/",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:11:45.839286+00:00"
+    },
+    {
+      "id": "282bb3981db51ae2c3bf7be7",
+      "title": "Email Discovery Methods",
+      "type": "procedure",
+      "source_url": "https://tisa-intelligence.github.io/osint/",
+      "confidence": 0.85,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:11:45.839286+00:00"
+    },
+    {
+      "id": "49b9ebac4c36f899496f9114",
+      "title": "Image Analysis Techniques",
+      "type": "procedure",
+      "source_url": "https://tisa-intelligence.github.io/osint/",
+      "confidence": 0.85,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:11:45.839286+00:00"
+    },
+    {
+      "id": "78b1f9ae3dc99632bf2976bd",
+      "title": "Geolocation Techniques",
+      "type": "procedure",
+      "source_url": "https://tisa-intelligence.github.io/osint/",
+      "confidence": 0.85,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:11:45.839286+00:00"
+    },
+    {
+      "id": "5ac837b33c8f8399e9569985",
+      "title": "Getting Started with OSINT",
+      "type": "procedure",
+      "source_url": "https://tisa-intelligence.github.io/osint/",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:11:45.839286+00:00"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "timestamp": "20261006_093151",
+  "skill_id": "linux_command_line",
+  "total_entries": 12,
+  "entries": [
+    {
+      "id": "ad79a460f8a058596f4a832a",
+      "title": "What is the Linux command line?",
+      "type": "fact",
+      "source_url": "https://ubuntu.com/desktop/docs/en/latest/tutorial/the-linux-command-line-for-beginners/",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:15:17.567671+00:00"
+    },
+    {
+      "id": "a53e0d898a59243023ba69be",
+      "title": "Opening a terminal on Ubuntu Desktop",
+      "type": "procedure",
+      "source_url": "https://ubuntu.com/desktop/docs/en/latest/tutorial/the-linux-command-line-for-beginners/",
+      "confidence": 0.95,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:15:17.567671+00:00"
+    },
+    {
+      "id": "e51ec8efac8c78b26c95fe82",
+      "title": "Using the terminal for powerful tasks",
+      "type": "fact",
+      "source_url": "https://ubuntu.com/desktop/docs/en/latest/tutorial/the-linux-command-line-for-beginners/",
+      "confidence": 0.7,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:15:17.567671+00:00"
+    },
+    {
+      "id": "1e2b1f73aeff3be4e26c828a",
+      "title": "What is the Linux command line?",
+      "type": "fact",
+      "source_url": "https://ubuntu.com/tutorials/command-line-for-beginners",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:15:17.567671+00:00"
+    },
+    {
+      "id": "cb6940d014a430dc5f7b56e2",
+      "title": "Common names for the Linux command line",
+      "type": "fact",
+      "source_url": "https://ubuntu.com/tutorials/command-line-for-beginners",
+      "confidence": 0.9,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:15:17.567671+00:00"
+    },
+    {
+      "id": "7818abcbd592d1ce5588a227",
+      "title": "Accessing the command line",
+      "type": "procedure",
+      "source_url": "https://ubuntu.com/tutorials/command-line-for-beginners",
+      "confidence": 0.8,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:15:17.567671+00:00"
+    },
+    {
+      "id": "8474937f4d49a23fab3559dd",
+      "title": "Basic file manipulation",
+      "type": "fact",
+      "source_url": "https://ubuntu.com/tutorials/command-line-for-beginners",
+      "confidence": 0.7,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:15:17.567671+00:00"
+    },
+    {
+      "id": "5c3985b84871c0c8c4e932ed",
+      "title": "Chaining commands",
+      "type": "fact",
+      "source_url": "https://ubuntu.com/tutorials/command-line-for-beginners",
+      "confidence": 0.7,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:15:17.567671+00:00"
+    },
+    {
+      "id": "cbc4fd1f3b05947632308660",
+      "title": "Using administrator powers",
+      "type": "fact",
+      "source_url": "https://ubuntu.com/tutorials/command-line-for-beginners",
+      "confidence": 0.7,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:15:17.567671+00:00"
+    },
+    {
+      "id": "b06aa7ffd71eb04c8b6bf469",
+      "title": "Prerequisites for the tutorial",
+      "type": "fact",
+      "source_url": "https://ubuntu.com/tutorials/command-line-for-beginners",
+      "confidence": 0.8,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:15:17.567671+00:00"
+    },
+    {
+      "id": "ed575a50775c916302cf4ec9",
+      "title": "export",
+      "type": "fact",
+      "source_url": "https://linuxcommand.org/lc3_man_page_index.php",
+      "confidence": 0.95,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:15:17.567671+00:00"
+    },
+    {
+      "id": "5abac70fe4c9e4e00c9d9b35",
+      "title": "command",
+      "type": "fact",
+      "source_url": "https://linuxcommand.org/lc3_man_page_index.php",
+      "confidence": 0.95,
+      "status": "approved",
+      "timestamp": "2026-10-06T09:15:17.567671+00:00"
+    }
+  ]
+}

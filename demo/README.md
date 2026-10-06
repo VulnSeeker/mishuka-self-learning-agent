@@ -5,8 +5,11 @@ Every file is auto-generated; nothing here is hand-written.
 
 ## Skills covered
 
-- `python_asyncio` — asynchronous programming
-- `python_decorators` — decorator patterns and use cases
+- `open_source_intelligence_osint` - OSINT tool categories and methods
+- `python_asyncio` - asynchronous programming
+- `python_decorators` - decorator patterns
+- `linux_command_line` - shell utilities and piping
+- `dockerfile_for_python_flask` - Docker images for Flask apps
 
 ## File reference
 
@@ -14,7 +17,7 @@ Every file is auto-generated; nothing here is hand-written.
 |---|---|
 | `*_skills_inventory.json` | All learned skills with metadata |
 | `*_skill_<name>_entries.json` | Knowledge entries for one skill |
-| `*_task_results_all.json` | Full runtime output for every task: answer, plan, generated code, sandbox result, gap analysis |
+| `*_task_results_all.json` | Full runtime output for every task: answer, plan, generated code, sandbox result |
 | `*_all_skills_bundle.json` | Complete backup: all skills and all entries |
 | `*_summary.json` | High-level summary of the run |
 
@@ -30,20 +33,26 @@ Every file is auto-generated; nothing here is hand-written.
 ## Example tasks
 
 ```
+onyx learn "OSINT"
 onyx learn "Python asyncio"
 onyx learn "Python decorators"
+onyx learn "Linux command line"
+onyx learn "Dockerfile for Python Flask"
 
+onyx run open_source_intelligence_osint "What are common OSINT tool categories for email discovery?"
 onyx run python_asyncio "Write a basic asyncio example that runs 3 tasks concurrently"
 onyx run python_decorators "Write a simple Python decorator that logs function calls"
+onyx run linux_command_line "Write a bash one-liner to find the 10 largest files"
+onyx run dockerfile_for_python_flask "Show a minimal Dockerfile for a Flask app"
 ```
 
 ### Result summary
 
-- Skills learned: 2
-- Knowledge entries: 10 (asyncio) + 11 (decorators) = 21 total
-- Tasks executed: 2, both successful
-- Code executed: yes, inside a sandboxed subprocess
-- Latency: 7.8s and 11.8s respectively
+- Skills learned: 5
+- Knowledge entries: 61 total across all skills
+- Tasks executed: 5, all successful
+- Code executed: yes, inside sandboxed subprocesses
+- All answers grounded in retrieved knowledge entries
 
 ## Reproducing locally
 
@@ -58,7 +67,7 @@ onyx run python_asyncio "Write a basic asyncio example"
 
 ## Last updated
 
-2026-10-06 09:07:28 UTC
+2026-10-06 09:38:31 UTC
 
 ---
 
