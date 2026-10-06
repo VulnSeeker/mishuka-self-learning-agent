@@ -1,0 +1,64 @@
+# ============================================================================
+# docker-compose.yml — Onyx local development stack
+# ============================================================================
+# Usage:
+#   docker compose up --build            # run in foreground
+#   docker compose up -d --build         # run detached
+#   docker compose logs -f onyx          # tail logs
+#   docker compose down                  # stop
+#   docker compose down -v               # stop + wipe data volume
+# ============================================================================
+
+services:
+  onyx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: onyx:latest
+    container_name: onyx-api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      # Override any env vars for the container runtime
+      DATA_DIR: /data
+      LOG_LEVEL: INFO
+    volumes:
+      # Persist data (registry + vectors) across restarts
+      - onyx-data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+    networks:
+      - onyx-net
+
+  # ---------------------------------------------------------------------------
+  # Optional: ngrok tunnel for public demo
+  # Uncomment to expose your local API on a public URL
+  # ---------------------------------------------------------------------------
+  # ngrok:
+  #   image: ngrok/ngrok:latest
+  #   container_name: onyx-ngrok
+  #   restart: unless-stopped
+  #   command: http onyx:8000 --log stdout
+  #   environment:
+  #     NGROK_AUTHTOKEN: ${NGROK_AUTHTOKEN}
+  #   ports:
+  #     - "4040:4040"
+  #   depends_on:
+  #     - onyx
+  #   networks:
+  #     - onyx-net
+
+volumes:
+  onyx-data:
+    driver: local
+
+networks:
+  onyx-net:
+    driver: bridge
