@@ -1,3 +1,4 @@
+
 """
 Onyx — the top-level facade.
 
@@ -10,15 +11,22 @@ Wires together:
   - SkillBootstrapper
   - RuntimeAgent
   - ModelBuilder
+  - TaskOrchestrator
 
 External callers (CLI, web dashboard, library users) should only import
 `Onyx` and its exceptions from this module.
 
-Example:
+Example (skill-scoped):
     >>> from onyx import Onyx
     >>> ox = Onyx()
     >>> ox.learn("OSINT")
     >>> result = ox.run("osint", "Enumerate emails for example.com")
+    >>> print(result.answer)
+
+Example (task-driven, auto-orchestration):
+    >>> from onyx import Onyx
+    >>> ox = Onyx()
+    >>> result = ox.task("Find exposed emails for example.com and write a validator")
     >>> print(result.answer)
 """
 
@@ -32,6 +40,7 @@ from onyx.config import CONFIG, Config
 from onyx.crawler import Crawler
 from onyx.llm import LLMClient
 from onyx.model_builder import ModelBuilder, ModelBuilderError
+from onyx.orchestrator import TaskOrchestrator, TaskResult
 from onyx.runtime import RuntimeAgent, SkillNotFoundError
 from onyx.sandbox import Sandbox
 from onyx.schemas import RuntimeResult, SkillRecord
@@ -63,11 +72,18 @@ class Onyx:
     """
     Self-learning skill agent.
 
-    Typical usage:
+    Two ways to use it:
+
+    1. Skill-scoped (explicit):
         ox = Onyx()
         ox.learn("OSINT")
         result = ox.run("osint", "Find emails for example.com")
-        print(result.answer)
+
+    2. Task-driven (automatic):
+        ox = Onyx()
+        result = ox.task("Find emails for example.com and write a validator")
+        # Onyx analyzes the task, matches existing skills, auto-learns
+        # missing ones, combines knowledge, and returns a final answer.
     """
 
     def __init__(self, cfg: Config = CONFIG) -> None:
@@ -94,10 +110,69 @@ class Onyx:
         )
         self.model_builder = ModelBuilder(self.llm, self.sandbox, cfg)
 
+        # Top-level orchestrator (task → skills → execution → answer)
+        self.orchestrator = TaskOrchestrator(
+            llm=self.llm,
+            registry=self.registry,
+            vectors=self.vectors,
+            bootstrapper=self.bootstrapper,
+            runtime=self.runtime,
+            search=self.search,
+            crawler=self.crawler,
+            sandbox=self.sandbox,
+            model_builder=self.model_builder,
+            cfg=cfg,
+        )
+
         log.debug("Onyx initialised: %s", cfg.summary())
 
     # ------------------------------------------------------------------
-    # Skills
+    # Task-driven entry point (auto-orchestration)
+    # ------------------------------------------------------------------
+
+    def task(
+        self,
+        task: str,
+        *,
+        auto_learn: bool = True,
+        progress: ProgressCB = None,
+    ) -> TaskResult:
+        """
+        Execute a natural-language task end-to-end.
+
+        Pipeline:
+          1. Analyze task → required skills
+          2. Match against existing registry
+          3. Auto-learn any missing skills (if auto_learn=True)
+          4. Retrieve knowledge from all matched skills
+          5. Execute via the primary skill (with sandboxed code if needed)
+          6. Optionally train a small model if the task demands it
+          7. Compose the final answer
+
+        Args:
+            task: Natural-language description of what to accomplish.
+            auto_learn: If True, bootstrap missing skills automatically.
+            progress: Optional callback for streaming progress messages.
+
+        Returns:
+            TaskResult with answer, skill matches, code output, plan, etc.
+        """
+        task = (task or "").strip()
+        if not task:
+            raise AgentError("task is required")
+
+        try:
+            return self.orchestrator.run(
+                task,
+                auto_learn=auto_learn,
+                progress=progress,
+            )
+        except Exception as e:  # noqa: BLE001
+            log.exception("task failed: %s", task[:120])
+            raise AgentError(f"task failed: {e}") from e
+
+    # ------------------------------------------------------------------
+    # Skills (explicit control)
     # ------------------------------------------------------------------
 
     def learn(self, skill_name: str, progress: ProgressCB = None) -> dict[str, Any]:
@@ -117,7 +192,7 @@ class Onyx:
         task: str,
         progress: ProgressCB = None,
     ) -> RuntimeResult:
-        """Execute a task using a learned skill."""
+        """Execute a task using a specific learned skill."""
         skill_id = (skill_id or "").strip()
         task = (task or "").strip()
         if not skill_id:
