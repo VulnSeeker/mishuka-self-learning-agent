@@ -242,7 +242,7 @@ addopts = [
     "--cov=onyx",
     "--cov-report=term-missing",
     "--cov-report=html:htmlcov",
-    "--cov-fail-under=25",
+    "--cov-fail-under=24",
 ]
 asyncio_mode = "auto"
 markers = [

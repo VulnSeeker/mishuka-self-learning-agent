@@ -75,6 +75,14 @@ class KnowledgeEntry(BaseModel):
     confidence: float = 0.7
     tags: list[str] = Field(default_factory=list)
 
+    @field_validator("type", mode="before")
+    @classmethod
+    def _type_fallback(cls, v: Any) -> KnowledgeType:
+        normalized = str(v or "").strip().lower()
+        if normalized in {"fact", "procedure", "code", "tool", "failure"}:
+            return normalized  # type: ignore[return-value]
+        return "fact"
+
     @field_validator("title")
     @classmethod
     def _title_ok(cls, v: str) -> str:
