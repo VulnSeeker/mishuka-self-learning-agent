@@ -169,43 +169,15 @@ select = [
     "E",
     "W",
     "F",
-    "I",
-    "N",
-    "UP",
-    "B",
-    "C4",
-    "SIM",
-    "RET",
-    "ARG",
-    "PTH",
-    "ERA",
-    "PL",
-    "RUF",
 ]
 ignore = [
-    "PLR0913",
-    "PLR0912",
-    "PLR0915",
-    "PLR2004",
     "E501",
-    "RUF100",
-    "SIM105",
-    "UP035",
-    "UP045",
-    "RUF022",
-    "I001",
-    "F401",
-    "B008",
-    "PLC0415",
-    "RUF023",
-    "PLW0602",
-    "PLW0603",
-    "UP037",
+    "W291",
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"tests/**/*.py" = ["ARG", "PLR2004", "S101"]
-"examples/**/*.py" = ["T201", "ARG"]
+"tests/**/*.py" = ["S101"]
+"examples/**/*.py" = ["T201"]
 
 [tool.ruff.lint.isort]
 known-first-party = ["onyx"]
