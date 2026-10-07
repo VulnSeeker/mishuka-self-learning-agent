@@ -1,3 +1,4 @@
+
 """Tests for onyx.schemas — pydantic validation."""
 
 from __future__ import annotations
@@ -59,13 +60,14 @@ class TestKnowledgeEntry:
         with pytest.raises(Exception):
             KnowledgeEntry(title="T", content="short")
 
-    def test_invalid_type_defaults_to_fact(self):
-        entry = KnowledgeEntry(
-            title="T",
-            content="x" * 100,
-            type="nonsense",
-        )
-        assert entry.type == "fact"
+    def test_invalid_type_rejected(self):
+        """Invalid type values must be rejected by the schema."""
+        with pytest.raises(Exception):
+            KnowledgeEntry(
+                title="T",
+                content="x" * 100,
+                type="nonsense",
+            )
 
     def test_confidence_clamped(self):
         e1 = KnowledgeEntry(title="T", content="x" * 100, confidence=2.0)
