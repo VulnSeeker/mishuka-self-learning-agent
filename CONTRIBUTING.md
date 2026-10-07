@@ -1,4 +1,5 @@
 
+```markdown
 # Contributing to Onyx
 
 Thanks for considering contributing to Onyx. This document outlines the
@@ -34,12 +35,13 @@ cp .env.example .env
 
 # Verify installation
 onyx info
+```
 
-Running Checks Locally
+## Running Checks Locally
 
 Before submitting a pull request, run:
-bash
 
+```bash
 # Lint
 ruff check src tests
 
@@ -51,81 +53,72 @@ mypy src
 
 # Tests
 pytest
+```
 
 All four must pass before a PR can be merged.
-Branch Naming
 
-    feat/short-description — new features
+## Branch Naming
 
-    fix/short-description — bug fixes
+- `feat/short-description` — new features
+- `fix/short-description` — bug fixes
+- `docs/short-description` — documentation
+- `refactor/short-description` — refactors
+- `test/short-description` — test improvements
+- `chore/short-description` — tooling, dependencies
 
-    docs/short-description — documentation
+## Commit Messages
 
-    refactor/short-description — refactors
+Follow [Conventional Commits](https://www.conventionalcommits.org/):
 
-    test/short-description — test improvements
-
-    chore/short-description — tooling, dependencies
-
-Commit Messages
-
-Follow Conventional Commits:
-text
-
+```
 feat: add graph memory backend
 fix: correct dedupe threshold for short entries
 docs: update quick start examples
 refactor: split storage layer into separate modules
 test: add coverage for orchestrator
 chore: bump ruff to 0.6.0
+```
 
 Keep the subject line under 72 characters. Use the body for details if needed.
-Pull Request Process
 
-    Fork the repository
+## Pull Request Process
 
-    Create a branch from main with a clear name
+1. Fork the repository
+2. Create a branch from `main` with a clear name
+3. Make your changes with focused commits
+4. Run all checks locally (`ruff`, `mypy`, `pytest`)
+5. Push your branch to your fork
+6. Open a pull request against `main`
+7. Fill in the PR template
+8. Address review feedback promptly
 
-    Make your changes with focused commits
+## What Gets Merged
 
-    Run all checks locally (ruff, mypy, pytest)
+- Bug fixes with tests
+- New features with tests and documentation
+- Performance improvements with benchmarks
+- Documentation improvements
+- Dependency updates that pass CI
 
-    Push your branch to your fork
+## What Doesn't Get Merged
 
-    Open a pull request against main
+- Changes that break existing tests
+- Large refactors without prior discussion
+- Features that duplicate existing functionality
+- Code without tests for new behavior
+- PRs that fail CI
 
-    Fill in the PR template
+## Questions
 
-    Address review feedback promptly
+Open an issue with the `question` label, or start a discussion.
 
-What Gets Merged
-
-    Bug fixes with tests
-
-    New features with tests and documentation
-
-    Performance improvements with benchmarks
-
-    Documentation improvements
-
-    Dependency updates that pass CI
-
-What Doesn't Get Merged
-
-    Changes that break existing tests
-
-    Large refactors without prior discussion
-
-    Features that duplicate existing functionality
-
-    Code without tests for new behavior
-
-    PRs that fail CI
-
-Questions
-
-Open an issue with the question label, or start a discussion.
-License
+## License
 
 By contributing, you agree that your contributions will be licensed under
-the MIT License (see LICENSE).
+the MIT License (see [LICENSE](LICENSE)).
+```
+
+
+**Save karo `CONTRIBUTING.md` mein** — bas. Poori file safe ho jaayegi.
+
+**Bolo "3"** — main `PULL_REQUEST_TEMPLATE.md` (last file) de doon. 🎯
