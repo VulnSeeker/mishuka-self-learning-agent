@@ -1,3 +1,4 @@
+
 # Contributing to Onyx
 
 Thanks for considering contributing to Onyx. This document outlines the
@@ -33,3 +34,98 @@ cp .env.example .env
 
 # Verify installation
 onyx info
+
+Running Checks Locally
+
+Before submitting a pull request, run:
+bash
+
+# Lint
+ruff check src tests
+
+# Format
+ruff format src tests
+
+# Type check
+mypy src
+
+# Tests
+pytest
+
+All four must pass before a PR can be merged.
+Branch Naming
+
+    feat/short-description — new features
+
+    fix/short-description — bug fixes
+
+    docs/short-description — documentation
+
+    refactor/short-description — refactors
+
+    test/short-description — test improvements
+
+    chore/short-description — tooling, dependencies
+
+Commit Messages
+
+Follow Conventional Commits:
+text
+
+feat: add graph memory backend
+fix: correct dedupe threshold for short entries
+docs: update quick start examples
+refactor: split storage layer into separate modules
+test: add coverage for orchestrator
+chore: bump ruff to 0.6.0
+
+Keep the subject line under 72 characters. Use the body for details if needed.
+Pull Request Process
+
+    Fork the repository
+
+    Create a branch from main with a clear name
+
+    Make your changes with focused commits
+
+    Run all checks locally (ruff, mypy, pytest)
+
+    Push your branch to your fork
+
+    Open a pull request against main
+
+    Fill in the PR template
+
+    Address review feedback promptly
+
+What Gets Merged
+
+    Bug fixes with tests
+
+    New features with tests and documentation
+
+    Performance improvements with benchmarks
+
+    Documentation improvements
+
+    Dependency updates that pass CI
+
+What Doesn't Get Merged
+
+    Changes that break existing tests
+
+    Large refactors without prior discussion
+
+    Features that duplicate existing functionality
+
+    Code without tests for new behavior
+
+    PRs that fail CI
+
+Questions
+
+Open an issue with the question label, or start a discussion.
+License
+
+By contributing, you agree that your contributions will be licensed under
+the MIT License (see LICENSE).
