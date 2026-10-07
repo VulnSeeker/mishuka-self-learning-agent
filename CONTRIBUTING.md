@@ -117,8 +117,3 @@ Open an issue with the `question` label, or start a discussion.
 By contributing, you agree that your contributions will be licensed under
 the MIT License (see [LICENSE](LICENSE)).
 ```
-
-
-**Save karo `CONTRIBUTING.md` mein** — bas. Poori file safe ho jaayegi.
-
-**Bolo "3"** — main `PULL_REQUEST_TEMPLATE.md` (last file) de doon. 🎯
