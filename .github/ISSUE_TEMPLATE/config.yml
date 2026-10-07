@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a Question
+    url: https://github.com/VulnSeeker/onyx-self-learning-agent/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: Read the Documentation
+    url: https://github.com/VulnSeeker/onyx-self-learning-agent#readme
+    about: Check the README for setup and usage instructions
+  - name: Report a Security Vulnerability
+    url: https://github.com/VulnSeeker/onyx-self-learning-agent/security/advisories/new
+    about: Privately report a security issue
