@@ -5,6 +5,10 @@
 > An autonomous agent that researches the web to build its own skill 
 > knowledge bases, then executes multi-skill tasks end-to-end.
 
+📖 **Read the story behind Onyx:**
+- [LinkedIn Article](https://www.linkedin.com/pulse/i-built-self-learning-ai-agent-from-scratch-heres-what-mubbshra-iqbal-xl6he)
+- [Medium Article](https://medium.com/@mubashraiqbal.pk/i-built-a-self-learning-ai-agent-from-scratch-heres-what-i-learned-672d59621459)
+
 [![CI](https://github.com/VulnSeeker/onyx-self-learning-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/VulnSeeker/onyx-self-learning-agent/actions/workflows/ci.yml)
 [![Docker](https://github.com/VulnSeeker/onyx-self-learning-agent/actions/workflows/docker.yml/badge.svg)](https://github.com/VulnSeeker/onyx-self-learning-agent/actions/workflows/docker.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/downloads/)
