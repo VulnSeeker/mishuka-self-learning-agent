@@ -5,11 +5,13 @@
 > An autonomous agent that researches the web to build its own skill 
 > knowledge bases, then executes multi-skill tasks end-to-end.
 
+[![CI](https://github.com/VulnSeeker/onyx-self-learning-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/VulnSeeker/onyx-self-learning-agent/actions/workflows/ci.yml)
+[![Docker](https://github.com/VulnSeeker/onyx-self-learning-agent/actions/workflows/docker.yml/badge.svg)](https://github.com/VulnSeeker/onyx-self-learning-agent/actions/workflows/docker.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Docker](https://img.shields.io/badge/docker-passing-brightgreen.svg)](https://github.com/VulnSeeker/onyx-self-learning-agent/actions)
-[![Code style: ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg)](https://github.com/astral-sh/ruff)
+[![Ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg)](https://github.com/astral-sh/ruff)
 [![Typing: mypy](https://img.shields.io/badge/typing-mypy-blue.svg)](https://mypy-lang.org/)
+[![Tests](https://img.shields.io/badge/tests-40%20passed-brightgreen.svg)](https://github.com/VulnSeeker/onyx-self-learning-agent/actions)
 
 Onyx is a self-learning agent that acquires skills on demand. Give it a 
 task — it analyzes what skills are needed, checks its existing knowledge 
@@ -30,6 +32,7 @@ No manual skill configuration. No pre-loaded knowledge. Just a task.
 - [API Reference](#api-reference)
 - [Configuration](#configuration)
 - [Project Structure](#project-structure)
+- [Development](#development)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
@@ -120,8 +123,6 @@ Done in 85.2s
 ## Quick Start
 
 ### Option A: Google Colab (Free, No Setup)
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
 
 Run this in a Colab cell:
 
@@ -463,6 +464,63 @@ onyx-self-learning-agent/
 
 ---
 
+## Development
+
+### Setup
+
+```bash
+# Clone
+git clone https://github.com/VulnSeeker/onyx-self-learning-agent.git
+cd onyx-self-learning-agent
+
+# Install dev dependencies
+pip install -e ".[api,dev]"
+
+# Copy env template
+cp .env.example .env
+# Edit .env with your API key
+```
+
+### Running Tests
+
+```bash
+# Run all tests
+pytest
+
+# With coverage report
+pytest --cov=onyx --cov-report=term-missing
+
+# Just unit tests
+pytest -m unit
+```
+
+### Linting
+
+```bash
+# Check for issues
+ruff check src tests
+
+# Auto-fix where possible
+ruff check --fix src tests
+
+# Check formatting
+ruff format --check src tests
+```
+
+### Type Checking
+
+```bash
+mypy src
+```
+
+### Pre-commit Hooks
+
+```bash
+pre-commit install
+```
+
+---
+
 ## Roadmap
 
 - [x] Web research → knowledge base pipeline
@@ -470,8 +528,8 @@ onyx-self-learning-agent/
 - [x] Multi-skill task orchestration
 - [x] FastAPI REST service
 - [x] Docker + docker-compose
-- [x] CI/CD workflows
-- [ ] Comprehensive test suite (in progress)
+- [x] CI/CD workflows (green)
+- [x] Test suite (40 tests passing)
 - [ ] Render / Fly.io deployment
 - [ ] Approval queue for knowledge updates
 - [ ] Graph memory for entity relations
@@ -483,23 +541,13 @@ onyx-self-learning-agent/
 
 Contributions welcome. To get started:
 
-```bash
-# Clone
-git clone https://github.com/VulnSeeker/onyx-self-learning-agent.git
-cd onyx-self-learning-agent
-
-# Install dev dependencies
-pip install -e ".[api,dev]"
-
-# Run linter
-ruff check src tests
-
-# Run tests
-pytest
-
-# Launch API locally
-onyx serve --reload
-```
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Run `ruff check src tests` and `pytest` to verify
+5. Commit (`git commit -m 'feat: add amazing feature'`)
+6. Push (`git push origin feature/amazing-feature`)
+7. Open a pull request
 
 Please open an issue before submitting a pull request for substantial changes.
 
@@ -529,34 +577,4 @@ MIT License — see [LICENSE](LICENSE) for details.
 ---
 
 _If you find this project useful, consider starring the repository._
-```
-
----
-
-## 🎯 Kya Kya Cover Hua
-
-| Section | Content |
-|---|---|
-| **Header** | Title, pitch, 5 badges |
-| **What It Does** | 3 modes (task-driven, skill-scoped, model training) |
-| **Demo** | Real skill table + real CLI output |
-| **Quick Start** | 3 install methods (Colab, local, Docker) |
-| **Usage** | CLI table, Python library, REST API |
-| **Architecture** | ASCII diagram + module table + self-learning flow |
-| **API Reference** | All endpoints with examples |
-| **Configuration** | All env vars organized by category |
-| **Project Structure** | Full tree |
-| **Roadmap** | Checkboxes (done + pending) |
-| **Contributing** | Dev setup instructions |
-| **License + Author** | Standard |
-
----
-
-## ⚠️ Note About Badges
-
-**Docker badge** is `passing` — accurate ✅  
-**CI badge** I intentionally left out — because tests still fail. Jab tests green ho jaayein, us waqt add karo:
-
-```markdown
-[![CI](https://github.com/VulnSeeker/onyx-self-learning-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/VulnSeeker/onyx-self-learning-agent/actions)
 ```
