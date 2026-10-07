@@ -10,52 +10,53 @@ assignees: ""
 
 ## Describe the Bug
 
-<!-- A clear and concise description of what the bug is. -->
+A clear and concise description of what the bug is.
 
 ## To Reproduce
 
 Steps to reproduce the behavior:
 
-1.
-2.
-3.
+1. 
+2. 
+3. 
 
 ## Expected Behavior
 
-<!-- What you expected to happen. -->
+A clear and concise description of what you expected to happen.
 
 ## Actual Behavior
 
-<!-- What actually happened instead. Include the exact error message if any. -->
+A clear and concise description of what actually happened. Include the exact error message if any.
 
 ## Screenshots / Logs
 
-<!-- If applicable, paste screenshots or terminal output. -->
+If applicable, paste screenshots or terminal output to help explain the problem.
 
 ```
-<paste logs here>
+paste logs here
 ```
 
 ## Environment
 
-- **OS**: [e.g., Ubuntu 22.04, Kali Linux, macOS 14]
-- **Python version**: [e.g., 3.11.5]
-- **Onyx version**: [run `onyx version`]
-- **LLM provider**: [e.g., OpenAI, Groq, Ollama]
-- **Installation method**: [pip / Docker / Colab]
+- OS: [e.g., Ubuntu 22.04, macOS 14, Windows 11]
+- Python version: [e.g., 3.11.5]
+- Onyx version: [run `onyx version`]
+- LLM provider: [e.g., OpenAI, Groq, Ollama]
+- Installation method: [pip, Docker, Colab]
 
 ## Configuration
 
-<!-- Paste the output of `onyx info` (redact your API keys). -->
+Paste the output of `onyx info` below (redact any API keys).
 
 ```
-<paste onyx info output here>
+paste onyx info output here
 ```
 
 ## Additional Context
 
-<!-- Any other relevant information. -->
+Add any other context about the problem here.
 
 ## Possible Fix
 
-<!-- If you have an idea of what might be causing this, describe it here. Optional. -->
+If you have an idea of what might be causing this, describe it here. Optional.
+```
