@@ -1,3 +1,5 @@
+
+```markdown
 ---
 name: Bug Report
 about: Report a bug or unexpected behavior
@@ -29,3 +31,31 @@ Steps to reproduce the behavior:
 ## Screenshots / Logs
 
 <!-- If applicable, paste screenshots or terminal output. -->
+
+```
+<paste logs here>
+```
+
+## Environment
+
+- **OS**: [e.g., Ubuntu 22.04, Kali Linux, macOS 14]
+- **Python version**: [e.g., 3.11.5]
+- **Onyx version**: [run `onyx version`]
+- **LLM provider**: [e.g., OpenAI, Groq, Ollama]
+- **Installation method**: [pip / Docker / Colab]
+
+## Configuration
+
+<!-- Paste the output of `onyx info` (redact your API keys). -->
+
+```
+<paste onyx info output here>
+```
+
+## Additional Context
+
+<!-- Any other relevant information. -->
+
+## Possible Fix
+
+<!-- If you have an idea of what might be causing this, describe it here. Optional. -->
